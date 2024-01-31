@@ -287,7 +287,7 @@ class ReCaptchaBuilder
         }
 
         // Create query string
-        $query = ($query) ? '?' . http_build_query($query) : "";
+        $query = ($query) ? '?' . http_build_query($query) . '&hl='.config("recaptcha.lang") : '?hl=' . config("recaptcha.lang");
         $html .= "<script src=\"" . $this->api_js_url .  $query . "\" async defer></script>";
 
         return $html;

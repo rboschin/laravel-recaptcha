@@ -13,6 +13,7 @@
  * To configure correctly please visit https://developers.google.com/recaptcha/docs/start
  */
 return [
+    'lang'                  			=> config('app.locale', 'en'),
 
     /**
      *
